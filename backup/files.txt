@@ -1,0 +1,11 @@
+/etc/ipset.d/
+/etc/iptables/
+/etc/dnsmasq.d/
+/etc/hostapd/hostapd.conf
+/etc/samba/smb.conf
+
+/etc/privoxy/config
+
+/etc/systemd/system/groxy.service
+/etc/systemd/system/ipset-persistent.service
+/etc/systemd/system/autossh.service
