@@ -4,7 +4,11 @@
 # Date  : 2021/06/01 12:05:35
 
 backup_root=~/pi-backup
-backup_dir=${backup_root}/`date '+%Y-%m-%d'`/
-mkdir -p ${backup_dir}
-rsync -avP --delete --files-from=./files.txt / ${backup_dir}
-ln -snf ${backup_dir} ${backup_root}/latest
+backup_dir=`date '+%Y-%m-%d'`
+backup_path=${backup_root}/${backup_dir}/
+mkdir -p ${backup_path}
+rsync -avP --delete --files-from=./files.txt / ${backup_path}
+pushd ${backup_root}
+ln -snf ${backup_dir} latest
+tar zcvf pi-latest.tar.gz ${backup_dir}
+popd
