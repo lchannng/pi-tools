@@ -9,3 +9,12 @@
 /etc/systemd/system/ipset-persistent.service
 /etc/systemd/system/autossh.service
 /var/lib/clash/
+
+/opt/prometheus/
+/opt/node_exporter/
+/etc/systemd/system/grafana.service
+/etc/systemd/system/node-exporter.service
+/etc/systemd/system/prometheus.service
+
+/etc/netplan/50-cloud-init.yaml
+/etc/hostname
